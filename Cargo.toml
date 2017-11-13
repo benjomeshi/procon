@@ -1,0 +1,6 @@
+[package]
+name = "procon"
+version = "0.1.0"
+authors = ["Rikuo Hasegawa <rikuo.hase1997@gmail.com>"]
+
+[dependencies]
