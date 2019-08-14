@@ -1,4 +1,4 @@
-//
+//https://atcoder.jp/contests/abs/tasks/abc085_b
 
 #![allow(unused_imports)]
 
@@ -30,4 +30,17 @@ macro_rules! read {
     }};
 }
 
-fn main() {}
+fn main() {
+    let (n, y) = read!(usize, usize);
+
+    for m in 0..n + 1 {
+        for g in 0..(n + 1 - m) {
+            if 10000 * m + 5000 * g + 1000 * (n-g-m) == y {
+                println!("{} {} {}", m, g, (n-g-m));
+                return;
+            }
+        }
+    }
+
+    println!("-1 -1 -1")
+}

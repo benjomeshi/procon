@@ -1,4 +1,4 @@
-//
+//https://atcoder.jp/contests/abs/tasks/arc089_a
 
 #![allow(unused_imports)]
 
@@ -30,4 +30,21 @@ macro_rules! read {
     }};
 }
 
-fn main() {}
+fn main() {
+    let n = read!(usize);
+    let stuff = read!(i64, i64, i64; n);
+
+    let mut valid = true;
+    let mut prev = (0, 0, 0);
+    for state in stuff {
+        let (tp, xp, yp) = prev;
+        let (t, x, y) = state;
+
+        let leftover_distance = (t - tp) - (x - xp).abs() - (y - yp).abs();
+        valid = valid && leftover_distance >= 0 && leftover_distance % 2 == 0;
+
+        prev = state;
+    }
+
+    println!("{}", if valid { "Yes" } else { "No" });
+}

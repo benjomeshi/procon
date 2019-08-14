@@ -35,3 +35,63 @@ error: expected one of `.`, `;`, `?`, `}`, or an operator, found `let`
 51 |     let sum : u32 = sums.iter().sum();
    |     ^^^ unexpected token
 
+error: expected one of `.`, `;`, `?`, `}`, or an operator, found `if`
+  --> <stdin>:43:9
+   |
+42 |         println!("{}", d)
+   |                          - expected one of `.`, `;`, `?`, `}`, or an operator here
+43 |         if d < prev {
+   |         ^^ unexpected token
+
+thread 'request-worker-0' panicked at 'Failed load file "": Custom { kind: Other, error: Io(Some(""), Some("Could not open file: ")) }', src/libcore/result.rs:999:5
+thread 'request-worker-4' panicked at 'Failed load file "": Custom { kind: Other, error: Io(Some(""), Some("Could not open file: ")) }', src/libcore/result.rs:999:5
+thread 'request-worker-5' panicked at 'byte index 889 is not a char boundary; it is inside 'ｌ' (bytes 888..891) of `                                                 
+#![allow(unused_imports)]
+
+use std::cmp::{max, min, Ordering};
+use std::collections::*;
+use std::io::{stderr, stdin, BufRead, Write};
+
+#[allow(dead_code)]
+fn rl() -> String {
+    let mut buf = String::new()`[...]', src/libcore/str/mod.rs:2034:5
+thread 'request-worker-1' panicked at 'byte index 889 is not a char boundary; it is inside 'ぇ' (bytes 888..891) of `                                                 
+#![allow(unused_imports)]
+
+use std::cmp::{max, min, Ordering};
+use std::collections::*;
+use std::io::{stderr, stdin, BufRead, Write};
+
+#[allow(dead_code)]
+fn rl() -> String {
+    let mut buf = String::new()`[...]', src/libcore/str/mod.rs:2034:5
+thread 'request-worker-1' panicked at 'byte index 933 is not a char boundary; it is inside 'い' (bytes 932..935) of `                                                 
+#![allow(unused_imports)]
+
+use std::cmp::{max, min, Ordering};
+use std::collections::*;
+use std::io::{stderr, stdin, BufRead, Write};
+
+#[allow(dead_code)]
+fn rl() -> String {
+    let mut buf = String::new()`[...]', src/libcore/str/mod.rs:2034:5
+thread 'request-worker-1' panicked at 'byte index 933 is not a char boundary; it is inside 'い' (bytes 932..935) of `                                                 
+#![allow(unused_imports)]
+
+use std::cmp::{max, min, Ordering};
+use std::collections::*;
+use std::io::{stderr, stdin, BufRead, Write};
+
+#[allow(dead_code)]
+fn rl() -> String {
+    let mut buf = String::new()`[...]', src/libcore/str/mod.rs:2034:5
+thread 'request-worker-4' panicked at 'byte index 934 is not a char boundary; it is inside 'い' (bytes 932..935) of `                                                 
+#![allow(unused_imports)]
+
+use std::cmp::{max, min, Ordering};
+use std::collections::*;
+use std::io::{stderr, stdin, BufRead, Write};
+
+#[allow(dead_code)]
+fn rl() -> String {
+    let mut buf = String::new()`[...]', src/libcore/str/mod.rs:2034:5

@@ -1,4 +1,4 @@
-//
+//https://atcoder.jp/contests/abs/tasks/abc088_b
 
 #![allow(unused_imports)]
 
@@ -30,4 +30,18 @@ macro_rules! read {
     }};
 }
 
-fn main() {}
+fn main() {
+    let _n = read!(usize);
+    let mut ns = read!([i64]);
+
+    ns.sort_by(|a, b| a.cmp(b).reverse());
+
+    let mut ans: i64 = 0;
+    let mut alice_turn = true;
+    for x in ns {
+        ans += if alice_turn { x } else { -x };
+        alice_turn = !alice_turn;
+    }
+
+    println!("{}", ans);
+}
