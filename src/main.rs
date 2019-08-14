@@ -1,27 +1,42 @@
-//https://www.hackerrank.com/challenges/time-conversion/problem
-
+//http://judge.u-aizu.ac.jp/onlinejudge/submission.jsp#submit/ALDS1_1/C
 use std::io;
-fn main() {
-    // variable declaration
-    let mut time_str = String::new();
 
-    // read variables
-    io::stdin().read_line(&mut time_str).ok().expect("read error");
+fn main(){
+    let mut n_str = String::new();
 
-    let times : Vec<&str> = time_str
-                                .split(':')
-                                .map(|s| s.trim())
-                                .collect();
-    let am_pm : String = times[2].chars().skip(2).take(2).collect();
+    // read
+    io::stdin().read_line(&mut n_str).ok().expect("read error");
 
-    let hour : i32 = times[0].parse().unwrap();
-    let hour_24 = if hour == 12 {
-        if am_pm == "PM" {12} else {0}
-    }else{
-        if am_pm == "PM" {hour + 12} else {hour}
-    };
+    let n: i64 = n_str.parse();
+    let mut primes_count : i64 = 0;
 
-    let rest_of_time : String = time_str.chars().skip(2).take(6).collect();
+    let mut x_str = String::new();
+    let isPrime = createIsPrime();
+    for _ in 0..n {
+        io::stdin().read_line(&mut x_str).ok().expect("read error");
 
-    println!("{:02}{}", hour_24, rest_of_time.as_str());
+        let x: i64 = x_str.parse();
+        primes_count = if isPrime(x) {primes_count+1}else{primes_count};
+    }
+
+    stdout().print_line(primes_count)
+
+}
+
+fn createIsPrime(){
+    let mut prior_primes: Vec<i64> = vec![2,3,5,7,11,13,17,19,23,29,31];
+    |x: i64| -> bool {
+        if prior_primes.into_iter().any(|y| (x % y) == 0){
+            return false;
+        }else{
+            let max_prime = prior_primes.into_iter().fold(prior_primes[0], |acc, &n| if acc > n {acc} else {n});
+            for i in max_prime..(x/2){
+                if x % i == 0{
+                    return false
+                }else{
+                    return true
+                }
+            }
+        }
+    }
 }
