@@ -1,4 +1,4 @@
-//https://atcoder.jp/contests/abs/tasks/abc088_b
+//
 
 #![allow(unused_imports)]
 
@@ -30,4 +30,6 @@ macro_rules! read {
     }};
 }
 
-fn main() {}
+fn main() {
+    
+}

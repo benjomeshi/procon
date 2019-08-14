@@ -1,5 +1,4 @@
-//https://atcoder.jp/contests/abs/tasks/abc088_b
-
+//https://atcoder.jp/contests/abs/tasks/abc081_b
 #![allow(unused_imports)]
 
 use std::cmp::{max, min, Ordering};
@@ -30,4 +29,15 @@ macro_rules! read {
     }};
 }
 
-fn main() {}
+fn main() {
+    let n = read!(usize);
+    let mut a = read!([usize]);
+
+    let mut i: usize = 0;
+    while a.iter().all(|x| x % 2 == 0) {
+        i += 1;
+        a = a.iter().map(|x| x / 2).collect();
+    }
+
+    println!("{}", i);
+}

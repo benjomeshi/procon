@@ -1,0 +1,37 @@
+thread 'request-worker-2' panicked at 'Failed load file "": Custom { kind: Other, error: Io(Some(""), Some("Could not open file: ")) }', src/libcore/result.rs:999:5
+note: Run with `RUST_BACKTRACE=1` environment variable to display a backtrace.
+thread 'request-worker-5' panicked at 'Failed load file "": Custom { kind: Other, error: Io(Some(""), Some("Could not open file: ")) }', src/libcore/result.rs:999:5
+error: expected expression, found `+`
+  --> <stdin>:51:11
+   |
+51 |         i++;
+   |           ^ expected expression
+
+error: expected one of `->`, `where`, or `{`, found `fn`
+ --> <stdin>:3:1
+  |
+1 | impl Dummy { fn sigma_n()
+  |                          - expected one of `->`, `where`, or `{` here
+2 | 
+3 | fn main() { unimplemented!() } }
+  | ^^ unexpected token
+
+[2019-08-14T13:46:14Z ERROR rls::actions::hover] format_method: error: Failed, input: "impl Dummy { fn sigma_n()\n\nfn main() { unimplemented!() } }"
+error: expected one of `.`, `;`, `?`, `}`, or an operator, found `let`
+  --> <stdin>:46:5
+   |
+44 |     println!("{}", n)
+   |                      - expected one of `.`, `;`, `?`, `}`, or an operator here
+45 | 
+46 |     let sums = sigma_n(n) - x;
+   |     ^^^ unexpected token
+
+error: expected one of `.`, `;`, `?`, `}`, or an operator, found `let`
+  --> <stdin>:51:5
+   |
+49 |     println!("{}", sums)
+   |                         - expected one of `.`, `;`, `?`, `}`, or an operator here
+50 | 
+51 |     let sum : u32 = sums.iter().sum();
+   |     ^^^ unexpected token
+

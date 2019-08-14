@@ -1,4 +1,4 @@
-//https://atcoder.jp/contests/abs/tasks/abc088_b
+//https://atcoder.jp/contests/abs/tasks/abc087_b
 
 #![allow(unused_imports)]
 
@@ -30,4 +30,23 @@ macro_rules! read {
     }};
 }
 
-fn main() {}
+fn main() {
+    let a = read!(usize);
+    let b = read!(usize);
+    let c = read!(usize);
+    let x = read!(usize);
+
+    let mut n = 0;
+
+    for i in 0..a + 1 {
+        for j in 0..b + 1 {
+            for k in 0..c + 1 {
+                if 500 * i + 100 * j + 50 * k == x {
+                    n += 1;
+                }
+            }
+        }
+    }
+
+    println!("{}", n)
+}
